@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini calculator</title>
+    <style>
+      .cal {
+        border: 4px solid teal;
+        background-color: rgb(204, 214, 214);
+        margin: auto;
+        margin-top: 200px;
+        width: 400px;
+        text-align: center;
+        height: 325px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+      input {
+        /* border:2px solid blue; */
+        /* margin-right: 30px; */
+        height: 25px;
+      }
+      .button {
+        /* border: 4px solid black; */
+        /* padding-right: 10px; */
+        margin: auto;
+        margin-top: 15%;
+      }
+      .button > button {
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+      .opera{
+        margin-top: 15px;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cal">
+      <h1>Mini calculator</h1>
+      <div class="button">
+        <input id="inp1" type="text" placeholder="Enter first number" />
+        <input id="inp2" type="text" placeholder="Enter second number" />
+        <div class="opera">
+          <button onclick="add()">Add</button>
+          <button onclick="subtract()">Subtract</button>
+          <button onclick="Multiply()">Multiply</button>
+          <button onclick="Divide()">Divide</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let button1 = document.getElementById("inp1");
+    let button2 = document.getElementById("inp2");
+    function add() {
+      var sum = +button1.value + +button2.value;
+      alert(sum);
+    }
+    function subtract() {
+      alert(Number(button1.value) - Number(button2.value));
+    }
+    function Multiply() {
+      alert(Number(button1.value) * Number(button2.value));
+    }
+    function Divide() {
+      alert(Number(button1.value) / Number(button2.value));
+    }
+  </script>
+</html>
